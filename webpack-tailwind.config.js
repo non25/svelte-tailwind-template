@@ -1,6 +1,8 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const tailwindcss = require('tailwindcss')('./tailwind.config.js');
+const tailwindConfig = require('./tailwind.config.js');
 const path = require('path');
+
+tailwindConfig.purge.enabled = false;
 
 module.exports = {
   entry: {
@@ -21,7 +23,7 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: [ tailwindcss ]
+                plugins: [ require('tailwindcss')(tailwindConfig) ]
               }
             }
           }

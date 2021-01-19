@@ -1,0 +1,9 @@
+node_modules
+package-lock.json
+
+.pnp.js
+.yarn
+yarn.lock
+
+public/**
+!public/index.html

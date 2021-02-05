@@ -67,7 +67,7 @@ module.exports = ({ production: prod }) => ({
       {
         test: /\.css$/,
         use: [
-          prod ? MiniCssExtractPlugin.loader : 'style-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader'
         ]
       },
@@ -82,7 +82,7 @@ module.exports = ({ production: prod }) => ({
         // from regular css, because generating tailwind's AST is expensive
         test: /\.tcss$/,
         use: [
-          prod ? MiniCssExtractPlugin.loader : 'style-loader',
+          MiniCssExtractPlugin.loader,
           'css-loader',
           {
             loader: 'postcss-loader',

@@ -1,12 +1,9 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const tailwindConfig = require('./tailwind.config.js');
 const path = require('path');
-
-tailwindConfig.purge.enabled = false;
 
 module.exports = {
   entry: {
-    'tailwind': './src/tailwind.tcss'
+    'tailwind': './src/tailwind.pcss'
   },
   output: {
     path: __dirname + '/public',
@@ -15,18 +12,11 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tcss$/,
+        test: /\.pcss$/,
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
-          {
-            loader: 'postcss-loader',
-            options: {
-              postcssOptions: {
-                plugins: [ require('tailwindcss')(tailwindConfig) ]
-              }
-            }
-          }
+          'postcss-loader'
         ]
       },
     ]

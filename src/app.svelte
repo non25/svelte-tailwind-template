@@ -28,7 +28,7 @@
 
 <ThrowClass />
 
-<style lang="tailwind">
+<style lang="postcss">
   h1 {
     @apply text-blue-500 font-bold w-44 text-4xl;
     transition: all .2s ease;

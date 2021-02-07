@@ -5,8 +5,8 @@ Another Svelte + TailwindCSS template, but this time it doesn't suck
 ## Features
 
 - Bundled with Webpack 5
-- `@apply` and friends working in svelte component's style tags, should be called explicitly: `<style lang="tailwind">`
-- Same in `.tcss` files
+- `@apply` and friends working in svelte component's style tags, should be called explicitly: `<style lang="postcss">`
+- Same in `.pcss` files
 - Hot module replacement
 - Sane reload times - 700 avg ms for Tailwind in components, 250 avg ms for regular component css. Tested on Ryzen 2500u capped at 2GHz
 - Prebuilding of Tailwind's unpurged global css in public to shorten reload times, made by running `npm run predev`
@@ -24,9 +24,10 @@ git clone https://github.com/non25/svelte-tailwind-template my-new-project
 npx degit non25/svelte-tailwind-template my-new-project
 cd my-new-project
 npm install
-npm run build
 npm run predev
 npm run dev
+
+npm run build
 ```
 
 ### Yarn 2
@@ -37,9 +38,10 @@ git clone https://github.com/non25/svelte-tailwind-template my-new-project
 npx degit non25/svelte-tailwind-template my-new-project
 cd my-new-project
 yarn install
-yarn build
 yarn predev
 yarn dev
+
+yarn build
 ```
 
 ## Notes
@@ -51,8 +53,6 @@ To have bearable reload times and the ability to use utility classes without `@a
 @tailwind components;
 @tailwind utilities;
 ```
-
-Also it is required to have `bundle.css` in `public`, or reloading won't work, so build it first - `npm run build` or `yarn build`.
 
 ## Improve this template
 

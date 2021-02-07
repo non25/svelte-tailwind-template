@@ -1,4 +1,5 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const sveltePreprocess = require('svelte-preprocess');
 const path = require('path');
 
@@ -78,6 +79,12 @@ module.exports = {
       filename: '[name].css'
     })
   ],
+  optimization: {
+    minimizer: [
+      `...`,
+      new CssMinimizerPlugin()
+    ],
+  },
   devtool: prod ? false : 'source-map',
   devServer: {
     hot: true,

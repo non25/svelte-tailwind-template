@@ -51,13 +51,6 @@ module.exports = {
       },
       {
         test: /\.pcss$/,
-        // skip tailwind's css in devmode to improve reload times
-        include: !prod ? /tailwind.pcss/ : /you-shouldn't-match-me-or-else/,
-        use: 'null-loader'
-      },
-      {
-        test: /\.pcss$/,
-        exclude: !prod ? /tailwind.pcss/ : /you-shouldn't-match-me-or-else/,
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',

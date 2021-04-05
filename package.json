@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "license": "MIT",
   "devDependencies": {
-    "@tailwindcss/jit": "^0.1.5",
     "autoprefixer": "^10.2.1",
     "cross-env": "^7.0.3",
     "css-loader": "^5.0.1",
@@ -15,7 +14,7 @@
     "svelte": "3.31.2",
     "svelte-loader": "^3.0.0",
     "svelte-preprocess": "^4.6.1",
-    "tailwindcss": "^2.0.2",
+    "tailwindcss": "^2.1.0",
     "webpack": "^5.15.0",
     "webpack-cli": "^4.3.1",
     "webpack-dev-server": "^3.11.2"
